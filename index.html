@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>D3 tutorial</title>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+</head>
+
+<body>
+
+    <script>
+        // let dataArray = [20, 40, 50, 60]
+        // const width = 500;
+        // const height = 500
+
+        // let widthScale = d3.scale.linear()
+        //                     .domain([0,60])
+        //                     .range([0,width])
+
+        // let color = d3.scale.linear()
+        //                 .domain([0,60])
+        //                 .range(["red", "blue"]);
+
+        // let axis = d3.svg.axis()
+        //                 .ticks(5)
+        //                 .scale(widthScale)
+
+        // let canvas = d3.select("body")
+        // .append("svg")
+        // .attr("width", width)
+        // .attr("height", height)
+        // .append("g")
+        // .attr("transform", "translate(20,0)");
+
+        // let circle = canvas.append("circle")
+        //             .attr("cx", 250)
+        //             .attr("cy", 250)
+        //             .attr("r", 50)
+        //             .attr("fill", "red");
+
+        // let rect = canvas.append("rect")
+        //             .attr("height", 50)
+        //             .attr("width", 100);
+
+        // let line = canvas.append("line")
+        //             .attr("x1", 0)
+        //             .attr("y1", 100)
+        //             .attr("x2", 400)
+        //             .attr("y2", 400)
+        //             .attr("stroke", "green")
+        //             .attr("stroke-width", 10);
+
+        // let bar = canvas.selectAll("rect")
+        //             .data(dataArray)
+        //             .enter()
+        //                 .append("rect")
+        //                 .attr("width", d => widthScale(d))
+        //                 .attr("height", 50)
+        //                 .attr("fill", d => color(d))
+        //                 .attr("y", (d,i)=> i*100);
+        
+        // canvas.append("g")
+        //         .attr("transform", "translate(0,400)")
+        //         .call(axis);
+
+        // end of video 6
+
+        // start video 7
+
+        // let data = [10];
+        // let canvas = d3.select("body")
+        //                 .append("svg")
+        //                 .attr("width", 500)
+        //                 .attr("height", 500);
+
+        // let circle1 = canvas.append("circle")
+        //                     .attr("cx", 50)
+        //                     .attr("cy", 150)
+        //                     .attr("r", 50);
+        
+        // let circle2 = canvas.append("circle")
+        //                     .attr("cx", 50)
+        //                     .attr("cy", 300)
+        //                     .attr("r", 50);
+
+        // // let circles = canvas.selectAll("circle")
+        // //                     .data(data)
+        // //                     .attr("fill", "red")
+        // //                     .enter()
+        // //                     .append("circle")
+        // //                     .attr("cx", 50)
+        // //                     .attr("cy", 50)
+        // //                     .attr("fill", "green")
+        // //                     .attr("r", 50);
+
+        // let circles = canvas.selectAll("circle")
+        //                     .data(data)
+        //                     .attr("fill", "red")
+        //                     .exit()                            
+        //                     .attr("fill", "blue")
+
+        // end of video 7
+
+        // start of video 8
+
+        // let canvas = d3.select("body")
+        //                 .append("svg")
+        //                 .attr("width", 500)
+        //                 .attr("height", 500);
+
+        // let circle = canvas.append("circle")
+        //                     .attr("cx", 50)
+        //                     .attr("cy", 50)
+        //                     .attr("r", 50);
+        
+        
+        // circle.transition()
+        // .duration(1500)
+        // .delay(1000)
+        // .attr("cx", 150)
+        // .transition()
+        // .attr("cy", 150)        
+        // .each("end", function() {d3.select(this).attr("fill", "red");});
+
+        // end of video 8
+
+        // start video 9
+
+        // video 9 talk about function to process array shift(), sum(), max(), min()
+
+        // start of video 10
+
+        // d3.json("mydata.json", function(data) {
+            // var canvas = d3.select("body").append("svg")
+            //     .attr("width", 500)
+            //     .attr("height", 500);
+            
+        //     canvas.selectAll("rect")
+        //         .data(data)
+        //         .enter()
+        //             .append("rect")
+        //             .attr("width", d => d.age*10)
+        //             .attr("height", 48)
+        //             .attr("y", (d, i) => i*50)
+        //             .attr("fill", "blue");
+        //     canvas.selectAll("text")
+        //         .data(data)
+        //         .enter()
+        //             .append("text")
+        //             .attr("fill", "white")
+        //             .attr("y", (d, i) => i*50+24)
+        //             .text(d=> d.name)
+        // });
+
+        // end of video 10
+
+        // start  of video 11
+
+        // var canvas = d3.select("body").append("svg")
+        //         .attr("width", 500)
+        //         .attr("height", 500);
+
+        // var data = [
+        //     {x: 10, y: 20},
+        //     {x: 40, y: 60},
+        //     {x: 50, y: 70},
+        // ]
+
+        // var group = canvas.append("g")
+        //     .attr("transfrom", "translate(100, 100)");
+        
+        // var line = d3.svg.line()
+        //     .x( d=>d.x)
+        //     .y( d=>d.y)
+        
+        // group.selectAll("path")
+        //     .data([data])
+        //     .enter()
+        //     .append("path")
+        //     .attr("d", line)
+        //     .attr("fill", "none")
+        //     .attr("stroke", "#000")
+        //     .attr("stroke-width",10);
+
+        // end of video 11
+
+        // start of video 12
+
+        var canvas = d3.select("body").append("svg")
+                .attr("width", 500)
+                .attr("height", 500);
+
+        
+        var group = canvas.append("g")
+            .attr("transform", "translate(100, 100)");
+
+
+        var r = 100;
+        var p = Math.PI*2;
+
+        var arc = d3.svg.arc()
+                    .innerRadius(r-20)
+                    .outerRadius(r)
+                    .startAngle(0)
+                    .endAngle(p);
+        
+        group.append("path")
+            .attr("d", arc);
+        
+    </script>
+
+</body>
+
+</html>
